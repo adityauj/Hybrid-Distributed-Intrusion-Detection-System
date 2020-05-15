@@ -1,0 +1,16 @@
+body {
+  background-color: #343A40;
+}
+
+#main{
+	margin-bottom: 10px;
+}
+#network-table{
+	margin-top: 20px;
+}
+textarea {
+  max-width: 500px;
+  height: 150px;
+  background-color : #343A40; 
+  color : red;
+}

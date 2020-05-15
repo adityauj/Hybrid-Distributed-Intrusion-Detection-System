@@ -1,0 +1,26 @@
+2019-03-02 14:40:48 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-03-02 14:41:53 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 594 flow
+2019-03-02 14:42:43 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 668 flow
+2019-03-02 14:42:43 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 704 flow
+2019-03-02 14:42:43 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 710 flow
+2019-03-02 14:48:51 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2019-03-02 14:48:51 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/module/bin/data/daily/2019-03-02_Flow.csv
+2019-03-02 14:48:58 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-03-02 14:49:22 DEBUG cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    break Packet loop
+2019-03-02 14:49:46 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2019-03-02 14:49:46 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/module/bin/data/daily/2019-03-02_Flow.csv
+2019-03-02 14:49:46 DEBUG cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    break Packet loop
+2019-03-02 14:50:17 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-03-02 14:50:34 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2019-03-02 14:50:34 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/module/bin/data/daily/2019-03-02_Flow.csv
+2019-03-02 14:50:41 DEBUG cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    break Packet loop
+2019-03-02 14:51:27 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/module/bin/data/daily/2019-03-02_Flow.csv
+2019-03-02 14:51:32 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-03-02 14:53:38 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2019-03-02 14:53:38 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/module/bin/data/daily/2019-03-02_Flow.csv
+2019-03-02 14:53:40 DEBUG cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    break Packet loop
+2019-03-02 14:54:50 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-03-02 14:57:59 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2019-03-02 14:57:59 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/module/bin/data/daily/2019-03-02_Flow.csv
+2019-03-02 14:58:10 DEBUG cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    break Packet loop
+2019-03-02 14:59:47 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...

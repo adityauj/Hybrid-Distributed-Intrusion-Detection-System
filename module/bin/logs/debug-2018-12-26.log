@@ -1,0 +1,7 @@
+2018-12-26 20:40:36 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2018-12-26 20:40:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 18 flow
+2018-12-26 20:40:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 18 flow
+2018-12-26 20:43:03 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!
+2018-12-26 20:53:56 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!
+2018-12-26 20:54:13 INFO  cic.cs.unb.ca.ifm.Cmd    The pcap file or folder does not exist! -> enx0c5b8f279a64
+2018-12-26 20:56:19 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!

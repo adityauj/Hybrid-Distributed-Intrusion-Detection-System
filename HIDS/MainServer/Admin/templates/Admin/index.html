@@ -1,0 +1,313 @@
+ {% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'Admin/bootstrap/css/bootstrap.min.css' %}">
+    
+
+    <link rel="stylesheet" type="text/css" href="{% static 'Admin/main.css'%}">
+    <script type="text/javascript" src = "{% static 'Admin/chart.js' %}"></script>
+    <script type="text/javascript" src = "{% static 'Admin/jquery.js' %}"></script>
+
+    <title>dashboard</title>
+    <script type="text/javascript">
+
+    var enpoint = 'home/ip'
+    var labelsPoints = ['0.0.0.0'];
+    var Newdata = [625];
+
+     var attack_labels = [];
+    var attack_count  = [];
+    
+    setInterval(function(){
+    $.ajax({
+        method : "GET",
+        url    : enpoint,
+
+        success : function(data){
+          var set1 = new Set(); 
+          console.log("Sucess")
+          console.log(data)
+
+          for(var keys in data){
+            set1.add(keys)
+          }
+          labelsPoints = Array.from(set1);
+          console.log(labelsPoints)
+
+          //console.log(data.attack_labels)
+          var plotpoints = []
+          for(var i=0;i<labelsPoints.length;i++){
+            plotpoints[i] = data[labelsPoints[i]].total_packets
+          }
+          Newdata = Array.from(plotpoints)
+          //console.log(data.attack_count)
+          drawLine()
+          //updateTable()
+
+          
+        },
+
+        error : function(error_data){
+          console.log("errorS")
+          console.log(error_data)
+        },
+
+
+    })
+
+},2000)
+    
+
+
+
+function drawLine(){
+                                          
+  new Chart(document.getElementById("myChart"), {
+                type: 'line',
+                data: {
+                  labels: labelsPoints,
+                  datasets: [
+                    {
+                      label: "data packets",
+                      backgroundColor: [
+                                         'rgba(255, 99, 132, 0.2)',
+                                          'rgba(54, 162, 235, 0.2)',
+                                          'rgba(255, 206, 86, 0.2)',
+                                          'rgba(75, 192, 192, 0.2)',
+                                          'rgba(153, 102, 255, 0.2)',
+                                          'rgba(255, 159, 64, 0.2)'
+                                          ],
+                      borderColor: [
+                                              'rgba(255, 99, 132, 1)',
+                                              'rgba(54, 162, 235, 1)',
+                                              'rgba(255, 206, 86, 1)',
+                                              'rgba(75, 192, 192, 1)',
+                                              'rgba(153, 102, 255, 1)',
+                                              'rgba(255, 159, 64, 1)'
+                                          ],
+                                          
+                      borderWidth: 1,
+
+                                          
+                      data: Newdata
+                                          
+                    }
+                  ]
+                },
+                options: {
+                                    animation : false,
+                                      scales: {
+                                          yAxes: [{
+                                              ticks: {
+                                                  beginAtZero: true
+                                              }
+                                          }]
+                                      }
+                                  }
+            });
+
+
+}
+
+    
+/*
+var ipps=[]; 
+function updateTable(){ 
+  var table = $("#table tbody"); 
+  for(var i=0;i<labelsPoints.length;i++){ 
+    if(!ipps.includes(labelsPoints[i])) { 
+      ipps += labelsPoints[i];
+
+      table.append("<tr><td>"+labelsPoints[i]+"</td><td><button type='button' class='btn btn-danger'>Block</button></td></tr>"); 
+}
+
+ }
+
+}
+*/
+
+
+setInterval(function(){
+    $.ajax({
+        method : "GET",
+        url    : "dougnut/draw",
+
+        success : function(data){
+          attack_labels = data.attack_labels
+          attack_count = data.attack_count
+          console.log("Printing attack labels")
+          console.log(attack_labels)
+          console.log(attack_count)
+          drawDougnut()
+        },
+
+        error : function(error_data){
+          console.log("errorS")
+          console.log(error_data)
+        },
+
+
+    })
+
+},10000)
+
+
+function drawDougnut(){
+  new Chart(document.getElementById("doughnut-chart"), {
+                type: 'doughnut',
+                data: {
+                  labels: attack_labels,
+                  datasets: [
+                    {
+                      label: "Attacks",
+                      backgroundColor: ["#3e95cd", "#8e5ea2","red","yellow",'green'],
+                      data: attack_count
+                    }
+                  ]
+                },
+                options: {
+                  animation : false,
+                  title: {
+                    display: true,
+                    text: 'Attack summary on system'
+                  }
+                }
+    });
+    }
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+  <body>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">HIDS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+           
+          </ul>
+
+          
+        </div>
+      </nav>
+
+
+    <div class = "container-fluid" id="main">
+
+        <div class="row">
+          <div class="col-lg">
+            <canvas id="myChart" width="50px" height="10px"></canvas>
+            <script>
+                
+            </script>
+          </div>
+        </div>
+
+    </div>
+
+    <!----
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-6 table-responsive" style="overflow-y:auto;" id = "network-table">
+        <table class="table table-dark table-striped" id = "table">
+          <thead>
+            <tr>
+              <th>IP Address</th>
+           </tr>
+          </thead>
+          <tbody>
+            <tr>
+               tabel content
+          </tbody>
+        </table>
+      </div>
+    -->
+      
+
+      
+    </div>
+    <div class ="container-fluid">
+    <div class = "row">
+      <div>
+        <textarea readonly cols="100" rows = "10" placeholder="CONSOLE" id="console" style="background-color: #343A40;color:red;"></textarea>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-sm-6">
+      <canvas id="doughnut-chart" width="800" height="450"></canvas>       
+      
+      </div>
+  </div>
+
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'Admin/jquery.js'%}"></script>
+    
+  </body>
+</html>
+
+
+<script type="text/javascript">
+setInterval(function(){
+    $.ajax({
+        method : "GET",
+        url    : "gettxt/get",
+
+        success : function(data){
+          console.log("inside read file method")
+          document.getElementById("console").innerHTML = data['content']
+
+          
+          
+        },
+
+        error : function(error_data){
+          console.log("errorS")
+          console.log(error_data)
+        },
+
+
+    })
+
+},2000)
+
+
+
+</script>
+

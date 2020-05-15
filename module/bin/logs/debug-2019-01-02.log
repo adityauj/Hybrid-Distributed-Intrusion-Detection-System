@@ -1,0 +1,12 @@
+2019-01-02 21:51:30 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-01-02 21:52:04 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 105 flow
+2019-01-02 21:52:04 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 118 flow
+2019-01-02 21:52:04 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 117 flow
+2019-01-02 21:53:05 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 148 flow
+2019-01-02 21:53:05 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 148 flow
+2019-01-02 21:53:23 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2019-01-02 21:53:23 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/CICFlowMeter-4.0/bin/data/daily/2019-01-02_Flow.csv
+2019-01-02 21:53:28 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2019-01-02 22:04:20 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!
+2019-01-02 22:04:41 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!
+2019-01-02 22:04:43 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!

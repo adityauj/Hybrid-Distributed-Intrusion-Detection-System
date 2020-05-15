@@ -1,0 +1,8 @@
+2018-12-23 15:50:27 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2018-12-23 15:50:54 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    Pcap stop listening
+2018-12-23 15:50:54 DEBUG cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    break Packet loop
+2018-12-23 15:50:54 INFO  cic.cs.unb.ca.flow.ui.FlowMonitorPane    path:/home/adityauj/CICFlowMeter-4.0/bin/data/daily/2018-12-23_Flow.csv
+2018-12-23 15:51:50 INFO  cic.cs.unb.ca.jnetpcap.worker.TrafficFlowWorker    Pcap is listening...
+2018-12-23 15:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 6 flow
+2018-12-23 15:52:57 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 20 flow
+2018-12-23 15:52:57 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 21 flow
